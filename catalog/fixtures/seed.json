@@ -1,0 +1,493 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "password": "pbkdf2_sha256$600000$test$password",
+      "email": "admin@library.com",
+      "first_name": "Admin",
+      "last_name": "User",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "date_joined": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "john_doe",
+      "password": "pbkdf2_sha256$600000$test$password",
+      "email": "john@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "jane_smith",
+      "password": "pbkdf2_sha256$600000$test$password",
+      "email": "jane@example.com",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2024-02-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "username": "bob_wilson",
+      "password": "pbkdf2_sha256$600000$test$password",
+      "email": "bob@example.com",
+      "first_name": "Bob",
+      "last_name": "Wilson",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2024-03-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.author",
+    "pk": 1,
+    "fields": {
+      "first_name": "George",
+      "last_name": "Orwell",
+      "date_of_birth": "1903-06-25"
+    }
+  },
+  {
+    "model": "catalog.author",
+    "pk": 2,
+    "fields": {
+      "first_name": "J.K.",
+      "last_name": "Rowling",
+      "date_of_birth": "1965-07-31"
+    }
+  },
+  {
+    "model": "catalog.author",
+    "pk": 3,
+    "fields": {
+      "first_name": "Agatha",
+      "last_name": "Christie",
+      "date_of_birth": "1890-09-15"
+    }
+  },
+  {
+    "model": "catalog.author",
+    "pk": 4,
+    "fields": {
+      "first_name": "Isaac",
+      "last_name": "Asimov",
+      "date_of_birth": "1920-01-02"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 1,
+    "fields": {
+      "name": "Science Fiction",
+      "slug": "science-fiction",
+      "description": "Stories about futuristic technology and space"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 2,
+    "fields": {
+      "name": "Dystopian",
+      "slug": "dystopian",
+      "description": "Dark visions of the future"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Fantasy",
+      "slug": "fantasy",
+      "description": "Magical worlds and creatures"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Mystery",
+      "slug": "mystery",
+      "description": "Crime and detective stories"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Classic Literature",
+      "slug": "classic-literature",
+      "description": "Timeless literary works"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 6,
+    "fields": {
+      "name": "Young Adult",
+      "slug": "young-adult",
+      "description": "Books for teenage readers"
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 1,
+    "fields": {
+      "title": "1984",
+      "description": "A dystopian social science fiction novel and cautionary tale about the dangers of totalitarianism.",
+      "isbn": "9780451524935",
+      "published_date": "1949-06-08",
+      "authors": [1],
+      "tags": [1, 2, 5],
+      "metadata": {
+        "pages": 328,
+        "publisher": "Penguin Books",
+        "language": "English",
+        "awards": ["Time's 100 Best English-language Novels"]
+      },
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 2,
+    "fields": {
+      "title": "Animal Farm",
+      "description": "A satirical allegorical novella about a group of farm animals who rebel against their human farmer.",
+      "isbn": "9780451526342",
+      "published_date": "1945-08-17",
+      "authors": [1],
+      "tags": [1, 2, 5],
+      "metadata": {
+        "pages": 112,
+        "publisher": "Penguin Books",
+        "language": "English"
+      },
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 3,
+    "fields": {
+      "title": "Harry Potter and the Philosopher's Stone",
+      "description": "The first book in the Harry Potter series about a young wizard discovering his magical heritage.",
+      "isbn": "9780747532699",
+      "published_date": "1997-06-26",
+      "authors": [2],
+      "tags": [3, 6],
+      "metadata": {
+        "pages": 223,
+        "publisher": "Bloomsbury",
+        "language": "English",
+        "series": "Harry Potter",
+        "series_number": 1
+      },
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 4,
+    "fields": {
+      "title": "Murder on the Orient Express",
+      "description": "Hercule Poirot investigates a murder on a luxury train.",
+      "isbn": "9780062693662",
+      "published_date": "1934-01-01",
+      "authors": [3],
+      "tags": [4, 5],
+      "metadata": {
+        "pages": 256,
+        "publisher": "Collins Crime Club",
+        "language": "English",
+        "protagonist": "Hercule Poirot"
+      },
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 5,
+    "fields": {
+      "title": "Foundation",
+      "description": "The first novel in Isaac Asimov's Foundation series about the collapse and rebirth of a galactic empire.",
+      "isbn": "9780553293357",
+      "published_date": "1951-06-01",
+      "authors": [4],
+      "tags": [1, 5],
+      "metadata": {
+        "pages": 255,
+        "publisher": "Gnome Press",
+        "language": "English",
+        "series": "Foundation",
+        "series_number": 1
+      },
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.copy",
+    "pk": 1,
+    "fields": {
+      "book": 1,
+      "barcode": "LIB-1984-001",
+      "status": "available",
+      "checkout_date": null,
+      "due_date": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.copy",
+    "pk": 2,
+    "fields": {
+      "book": 1,
+      "barcode": "LIB-1984-002",
+      "status": "borrowed",
+      "checkout_date": "2024-10-25",
+      "due_date": "2024-11-08",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-10-25T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.copy",
+    "pk": 3,
+    "fields": {
+      "book": 2,
+      "barcode": "LIB-AF-001",
+      "status": "available",
+      "checkout_date": null,
+      "due_date": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.copy",
+    "pk": 4,
+    "fields": {
+      "book": 3,
+      "barcode": "LIB-HP-001",
+      "status": "borrowed",
+      "checkout_date": "2024-11-01",
+      "due_date": "2024-11-15",
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-11-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.copy",
+    "pk": 5,
+    "fields": {
+      "book": 3,
+      "barcode": "LIB-HP-002",
+      "status": "available",
+      "checkout_date": null,
+      "due_date": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.copy",
+    "pk": 6,
+    "fields": {
+      "book": 4,
+      "barcode": "LIB-ORIENT-001",
+      "status": "available",
+      "checkout_date": null,
+      "due_date": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.copy",
+    "pk": 7,
+    "fields": {
+      "book": 5,
+      "barcode": "LIB-FOUND-001",
+      "status": "available",
+      "checkout_date": null,
+      "due_date": null,
+      "created_at": "2024-01-01T10:00:00Z",
+      "updated_at": "2024-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.review",
+    "pk": 1,
+    "fields": {
+      "book": 1,
+      "user": 2,
+      "rating": 5,
+      "comment": "An absolute masterpiece! Orwell's vision of a totalitarian future is chillingly relevant even today. The concepts of Big Brother and thoughtcrime have become part of our cultural lexicon. A must-read for everyone.",
+      "created_at": "2024-03-15T14:30:00Z",
+      "updated_at": "2024-03-15T14:30:00Z"
+    }
+  },
+  {
+    "model": "catalog.review",
+    "pk": 2,
+    "fields": {
+      "book": 1,
+      "user": 3,
+      "rating": 4,
+      "comment": "Very thought-provoking and well-written. Some parts were a bit slow, but the overall message is powerful and disturbing. Definitely makes you think about surveillance and government control.",
+      "created_at": "2024-04-20T09:15:00Z",
+      "updated_at": "2024-04-20T09:15:00Z"
+    }
+  },
+  {
+    "model": "catalog.review",
+    "pk": 3,
+    "fields": {
+      "book": 2,
+      "user": 2,
+      "rating": 5,
+      "comment": "A brilliant allegory that works on multiple levels. Short but incredibly impactful. The way Orwell uses farm animals to critique political systems is genius.",
+      "created_at": "2024-05-10T11:00:00Z",
+      "updated_at": "2024-05-10T11:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.review",
+    "pk": 4,
+    "fields": {
+      "book": 3,
+      "user": 3,
+      "rating": 5,
+      "comment": "Pure magic! This book started my love for the Harry Potter series. J.K. Rowling created such a rich and imaginative world. Perfect for both children and adults.",
+      "created_at": "2024-06-05T16:45:00Z",
+      "updated_at": "2024-06-05T16:45:00Z"
+    }
+  },
+  {
+    "model": "catalog.review",
+    "pk": 5,
+    "fields": {
+      "book": 3,
+      "user": 4,
+      "rating": 4,
+      "comment": "A wonderful introduction to the wizarding world. The characters are lovable and the plot is engaging. My kids absolutely loved it too!",
+      "created_at": "2024-07-12T13:20:00Z",
+      "updated_at": "2024-07-12T13:20:00Z"
+    }
+  },
+  {
+    "model": "catalog.review",
+    "pk": 6,
+    "fields": {
+      "book": 4,
+      "user": 4,
+      "rating": 5,
+      "comment": "Agatha Christie at her finest! The twist at the end completely caught me off guard. Poirot is such a brilliant detective. Highly recommended for mystery lovers.",
+      "created_at": "2024-08-18T10:30:00Z",
+      "updated_at": "2024-08-18T10:30:00Z"
+    }
+  },
+  {
+    "model": "catalog.review",
+    "pk": 7,
+    "fields": {
+      "book": 5,
+      "user": 2,
+      "rating": 4,
+      "comment": "Asimov's Foundation is epic in scope. The concept of psychohistory is fascinating. A bit dense at times, but definitely worth the read for sci-fi fans.",
+      "created_at": "2024-09-22T15:00:00Z",
+      "updated_at": "2024-09-22T15:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.loan",
+    "pk": 1,
+    "fields": {
+      "copy": 2,
+      "user": 2,
+      "borrowed_at": "2024-10-25T10:00:00Z",
+      "due_back": "2024-11-08",
+      "returned_at": null,
+      "created_at": "2024-10-25T10:00:00Z",
+      "updated_at": "2024-10-25T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.loan",
+    "pk": 2,
+    "fields": {
+      "copy": 4,
+      "user": 3,
+      "borrowed_at": "2024-11-01T14:30:00Z",
+      "due_back": "2024-11-15",
+      "returned_at": null,
+      "created_at": "2024-11-01T14:30:00Z",
+      "updated_at": "2024-11-01T14:30:00Z"
+    }
+  },
+  {
+    "model": "catalog.loan",
+    "pk": 3,
+    "fields": {
+      "copy": 3,
+      "user": 4,
+      "borrowed_at": "2024-09-15T09:00:00Z",
+      "due_back": "2024-09-29",
+      "returned_at": "2024-09-28T16:45:00Z",
+      "created_at": "2024-09-15T09:00:00Z",
+      "updated_at": "2024-09-28T16:45:00Z"
+    }
+  },
+  {
+    "model": "catalog.loan",
+    "pk": 4,
+    "fields": {
+      "copy": 6,
+      "user": 2,
+      "borrowed_at": "2024-08-10T11:20:00Z",
+      "due_back": "2024-08-24",
+      "returned_at": "2024-08-23T14:00:00Z",
+      "created_at": "2024-08-10T11:20:00Z",
+      "updated_at": "2024-08-23T14:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.loan",
+    "pk": 5,
+    "fields": {
+      "copy": 1,
+      "user": 3,
+      "borrowed_at": "2024-07-05T10:00:00Z",
+      "due_back": "2024-07-19",
+      "returned_at": "2024-07-18T09:30:00Z",
+      "created_at": "2024-07-05T10:00:00Z",
+      "updated_at": "2024-07-18T09:30:00Z"
+    }
+  }
+]
