@@ -8,19 +8,36 @@ services:
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-library_db}
       POSTGRES_USER: ${POSTGRES_USER:-library_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_strong_password} # fetches POSTGRES_PASSWORD from .env file or falls back on default value
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_strong_password}
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:
-      # Persist data even when container is removed
       - postgres_data:/var/lib/postgresql/data
-      # Optional: Add initialization scripts here
-      # - ./init-scripts:/docker-entrypoint-initdb.d
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-library_user} -d ${POSTGRES_DB:-library_db}"]
       interval: 10s
       timeout: 5s
       retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: library_web
+    command: sh /app/entrypoint.sh
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      POSTGRES_DB: ${POSTGRES_DB:-library_db}
+      POSTGRES_USER: ${POSTGRES_USER:-library_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_strong_password}
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
 
 volumes:
   postgres_data:
