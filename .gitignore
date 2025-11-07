@@ -47,6 +47,9 @@ staticfiles/
 .DS_Store
 Thumbs.db
 
+.claude
+settings.local.json
+
 # Database backups
 *.sql
 backup.sql
